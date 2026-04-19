@@ -11,5 +11,5 @@
       3531
   tasks:
     - name: print Password
-      ansible.built.debug:
+      ansible.builtin.debug:
         msg: "{{ PASSWORD }}"
