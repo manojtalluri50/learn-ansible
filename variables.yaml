@@ -16,3 +16,5 @@
       vars:
       ansible.builtin.debug:
         msg: Var URL - {{ URL }}
+  roles:
+    - sample
