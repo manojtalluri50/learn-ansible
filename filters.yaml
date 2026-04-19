@@ -1,0 +1,9 @@
+- name: Conditions
+  hosts: localhost
+  connection: local
+  vars:
+    URL: https://tomcat.apache.org/tomcat-11.0-doc/jndi-resources-howto.html
+  tasks:
+    - name: print
+      ansible.builtin.debug:
+        msg: "{{ URL | split('/')}}"
