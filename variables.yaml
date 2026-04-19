@@ -16,5 +16,14 @@
       vars:
       ansible.builtin.debug:
         msg: Var URL - {{ URL }}
+
+    - name: task output
+      ansible.builtin.shell: ls -l
+      register: output
+
+    - name: print output
+      ansible.builtin.debug:
+        msg: "{{ output }}"
   roles:
     - sample
+
