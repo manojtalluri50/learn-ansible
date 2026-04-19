@@ -1,0 +1,13 @@
+- name: Conditions
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Print if value is greater than 10
+      ansible.builtin.debug:
+        msg: "{{ VAL }} is greater than 10"
+        when: VAl>10
+
+    - name: Print if value is less than 10
+      ansible.builtin.debug:
+        msg: "{{ VAL }} is less than 10"
+        when: VAl<10
