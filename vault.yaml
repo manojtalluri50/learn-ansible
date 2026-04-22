@@ -13,3 +13,4 @@
     - name: print Password
       ansible.builtin.debug:
         msg: "{{ PASSWORD }}"
+        
