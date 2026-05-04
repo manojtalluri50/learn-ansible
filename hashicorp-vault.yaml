@@ -1,0 +1,7 @@
+- name: Hashicorp Vault Connect
+  hosts: localhost
+  connection: local
+  tasks:
+   - name: print the password
+     ansible.builtin.debug:
+       msg:"Password  - {{ lookup('community.hashi_vault.hashi_vault', 'secret=test/demo-ssh:password token=hvs.TckBOwNWPMaers46QXhIVBGX url=http://51.137.189.165:8200') }}"
